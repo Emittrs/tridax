@@ -1,0 +1,24 @@
+{
+  "name": "tridax",
+  "version": "1.0.0",
+  "description": "A Tridax Const. Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Emittrs/tridax.git"
+  },
+  "keywords": [],
+  "author": "Nnamdi, Kennedy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Emittrs/tridax/issues"
+  },
+  "homepage": "https://github.com/Emittrs/tridax#readme",
+  "dependencies": {
+    "express": "^4.15.2",
+    "hbs": "^4.0.1"
+  }
+}
