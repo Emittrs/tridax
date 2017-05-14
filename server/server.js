@@ -1,10 +1,19 @@
 const express = require('express'),
-hbs = require('hbs');
+hbs = require('hbs'),
+path = require('path');
 
-let app = express();
+var app = express();
+var port = process.env.PORT || 3000;
 
-hbs.registerPartials(__dirname + '/views/partials');
-app.set('view engine', 'hbs');
-app.use(express.static(__dirname + '/public'));
+const publicPath = path.join(__dirname, '../public')
+
+app.use(express.static(publicPath));
 
 // You can continue from here
+app.get('/', (request, response)=>{
+    response.render('index.html');
+});
+
+app.listen(port, function(){
+    console.log(`Server listening at port ${port}`);
+});
