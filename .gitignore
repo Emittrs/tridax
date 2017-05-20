@@ -3,3 +3,5 @@
 
 #Exclude .vscode folder
 /.vscode
+
+/.vs

@@ -1,19 +1,20 @@
 const express = require('express'),
-hbs = require('hbs'),
-path = require('path');
+    hbs = require('hbs');
 
-var app = express();
-var port = process.env.PORT || 3000;
+const app = express();
+const port = process.env.PORT || 3000;
 
-const publicPath = path.join(__dirname, '../public')
+app.set('views', `${__dirname}/views`);
+app.set('view engine', 'hbs');
 
-app.use(express.static(publicPath));
+app.use('/', express.Router());
 
-// You can continue from here
-app.get('/', (request, response)=>{
-    response.render('index.html');
+app.get('/', (request, response) => {
+    response.render('index');
 });
 
-app.listen(port, function(){
+app.use(express.static(`${__dirname}/public`));
+
+app.listen(port, () => {
     console.log(`Server listening at port ${port}`);
 });
